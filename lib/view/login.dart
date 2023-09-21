@@ -3,6 +3,7 @@ import 'package:login_test/controller/login_cnrtl.dart';
 import 'package:login_test/core/style.dart';
 import 'package:login_test/view/bottom_text.dart';
 import 'package:login_test/view/common_widgets.dart';
+import 'package:login_test/view/lottie_container.dart';
 import 'package:login_test/view/otp_verify.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
@@ -33,18 +34,9 @@ class Login extends StatelessWidget {
           padding: EdgeInsets.all(height * 0.02),
           child: Column(
             children: [
-              SizedBox(height: height * 0.05),
-              SizedBox(
-                height: height * 0.3,
-                width: width * 0.8,
-                child: OverflowBox(
-                  maxHeight: height,
-                  maxWidth: width,
-                  child: Lottie.asset(
-                    'assets/lotties/login.json',
-                    fit: BoxFit.cover,
-                  ),
-                ),
+              SizedBox(height: height * 0.02),
+              const LottieContainer(
+                lottie: 'assets/lotties/animation_lmtcjiwl.json',
               ),
               SizedBox(height: height * 0.1),
               TextField(

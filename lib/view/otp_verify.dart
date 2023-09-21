@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:login_test/core/style.dart';
 import 'package:login_test/view/bottom_text.dart';
 import 'package:login_test/view/common_widgets.dart';
+import 'package:login_test/view/lottie_container.dart';
 import 'package:login_test/view/otp_succes_alert.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
@@ -39,17 +40,7 @@ class OTPVerifyScreen extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: height * 0.05),
-              SizedBox(
-                height: height * 0.3,
-                child: OverflowBox(
-                  maxHeight: height,
-                  maxWidth: width,
-                  child: Lottie.asset(
-                    'assets/lotties/login.json',
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
+              LottieContainer(lottie: "assets/lotties/animation_lmtc6vrk.json"),
               SizedBox(height: height * 0.05),
               const Text(
                 'OTP send to',
@@ -121,3 +112,5 @@ class OTPVerifyScreen extends StatelessWidget {
     );
   }
 }
+
+
